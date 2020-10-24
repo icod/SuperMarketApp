@@ -12,7 +12,15 @@ In deze opdracht probeer je een (fractie) van een IT systeem van een supermarkt 
 - Bonnetje printen
 - (Unit) testen maken
 
-
+Producten (naam, barcode, prijs):
+<ul>
+  <li>Kaas, 156734,  4.99</li>
+  <li>Ham, 579843, 1.49</li>
+  <li>Melk, 378941, 0.99</li>
+  <li>Pizza, 739214, 4.59</li>
+  <li>Bier, 798234, 11,99</li>
+</ul>
+  
 <h3>Opdracht 2</h3>
 - Producten met eerdere eigenschappen in tabel zetten
 - Voorraden in tabel zetten
@@ -23,3 +31,6 @@ Bericht sturen naar voorraadserver
 
 <h3>Opdracht 4</h3>
 API opzetten om voorraden weer te updaten
+
+<h3>Optionele opdrachten</h3>
+- voeg een kolom ExpiryDate toe aan de producten. Je kan uitgaan dat de 100 producten in batches komen. Zorg er nu voor dat producten die nog 1 dag houdbaar zijn, automatisch de houdbaarheidsbonus krijgen
