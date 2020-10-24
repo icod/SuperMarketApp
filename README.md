@@ -1,9 +1,9 @@
 <h1>SuperMarketApp  -- Googledagopdracht :)</h1>
-<h4>Deze odpracht is geheel vrijblijvend. Mocht je mee willen doen aan deze opdracht, dan zou dat het leukste zijn als we teams maken! Meeste IDE's hebben wel collaboration extensions zodat je samen (op afstand) kan pair-programmen
+<h4>Deze opdracht is geheel vrijblijvend. Mocht je mee willen doen aan deze opdracht, dan zou dat het leukste zijn als we teams maken! De meeste IDE's hebben wel collaboration extensions zodat je samen (op afstand) kan pair-programmen
 <ul>
   <li>Clone de repo</li>
   <li>Maak een branch per opdracht</li>
-  <li>Je kan bijvoorbeeld je branch zo noemen: /{teamnaam}/OpdrachtX</li>
+  <li>Je kan bijvoorbeeld je branch zo noemen: {teamnaam}/OpdrachtX</li>
   <li>Ben je klaar met een opdracht? Open een PR voor je branch. NIET MERGEN AUB!</li>
   <li>Volgende opdracht? Trek een branch van je vorige branch en ga daar mee verder</li> 
   </ul>
