@@ -1,0 +1,2 @@
+# SuperMarketApp
+Kassa- en voorraadsysteem
