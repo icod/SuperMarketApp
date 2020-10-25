@@ -61,4 +61,5 @@ Maak nu zelf een API die berichten kan ontvangen om de voorraad bij te werken.
 <ul>
   <li>Voeg een kolom ExpiryDate toe aan de producten. Je kan uitgaan dat de 100 producten in batches komen. Zorg er nu voor dat producten die nog 1 dag houdbaar zijn, automatisch de houdbaarheidsbonus krijgen</li>
   <li>Er is een foutje gemaakt in het voorraadsysteem! Een klant komt bij de kassa, rekent af, en de kassa geeft een error! Wat blijkt: Bier was het laatste product maar het voorraadsysteem dacht dat het al op was! Maak logica om dit soort fouten af te handelen </li>
+  <li>Print nu een netjes bonnetje voor de klant met de volgende gegevens. Een lijst van: Productnaam, aantal, prijs per 1, prijs totaal aantal van 1 product, korting totaal van een product met een '-' ervoor. Onderaan komt een totaalbedrag wat afgerekend is en de hoeveelheid korting totaal met een '-' ervoor</li>
 </ul>
