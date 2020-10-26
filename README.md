@@ -29,7 +29,7 @@ Producten (naam, barcode, prijs):
 </ul>
   
 <h3>Opdracht 2 -- Voorraden bijhouden</h3>
-Nu gaan we de voorraden bijhouden als er producten bij de kassa worden afgerekend
+Nu gaan we de voorraden bijhouden als er producten bij de kassa worden afgerekend. Je mag helemaal zelf weten hoe je dit gaat inrichten. Onderstaand is een voorbeeld stappenplan om een relationele database te maken om enige houvast te bieden.
 <ul>
   <li>Maak een database aan</li>
   <li>Maak een tabel (of wat je ook wil gebruiken) met de eerdere productvoorbeelden</li>
@@ -45,7 +45,8 @@ In deze opdracht, ga je contact maken met de super LijpeVoorraadServer (LVS)! De
 <ul>
   <li>Zet een connector op die HTTP requests kan uitvoeren</li>
   <li>Maak een berichtenmodel op</li>
-  <li>Aan het einde van de dag zijn er 5 klanten geweest met een stapel producten. Het is tijd voor de call naar LVS. Zorg dat LVS een bericht krijgt dat het verschil van de aantal producten dat je wil hebben (100), en de huidige voorraad</li>
+  <li>Aan het einde van de dag zijn er 5 klanten geweest met een stapel producten. Het is tijd voor de call naar LVS. Zorg dat LVS een bericht krijgt om alle producten naar 100 aan te vullen. Toon dit aan met tests</li>
+  
 </ul>
 
 <h3>Opdracht 4 -- Voorraden worden bijgevuld</h3>
@@ -59,7 +60,7 @@ Maak nu zelf een API die berichten kan ontvangen om de voorraad bij te werken.
 
 <h3>Optionele opdrachten</h3>
 <ul>
-  <li>Voeg een kolom ExpiryDate toe aan de producten. Je kan uitgaan dat de 100 producten in batches komen. Zorg er nu voor dat producten die nog 1 dag houdbaar zijn, automatisch de houdbaarheidsbonus krijgen</li>
-  <li>Er is een foutje gemaakt in het voorraadsysteem! Een klant komt bij de kassa, rekent af, en de kassa geeft een error! Wat blijkt: Bier was het laatste product maar het voorraadsysteem dacht dat het al op was! Maak logica om dit soort fouten af te handelen </li>
-  <li>Print nu een netjes bonnetje voor de klant met de volgende gegevens. Een lijst van: Productnaam, aantal, prijs per 1, prijs totaal aantal van 1 product, korting totaal van een product met een '-' ervoor. Onderaan komt een totaalbedrag wat afgerekend is en de hoeveelheid korting totaal met een '-' ervoor</li>
+  <li>Voeg een kolom ExpiryDate toe aan de producten. Je kan uitgaan dat de 100 producten in batches komen. Zorg er nu voor dat producten die nog 1 dag houdbaar zijn, automatisch de houdbaarheidskorting krijgen. Toon dit aan met tests</li>
+  <li>Er is een foutje gemaakt in het voorraadsysteem! Een klant komt bij de kassa, rekent af, en de kassa geeft een error! Wat blijkt: Bier was het laatste product maar het voorraadsysteem dacht dat het al op was! Maak logica om dit soort fouten af te handelen. Toon dit aan met tests</li>
+  <li>Print nu een netjes bonnetje voor de klant met de volgende gegevens. Een lijst van: Productnaam, aantal, prijs per 1, prijs totaal aantal van 1 product, korting totaal van een product met een '-' ervoor. Onderaan komt een totaalbedrag wat afgerekend is en de hoeveelheid korting totaal met een '-' ervoor. Toon dit aan met tests</li>
 </ul>
