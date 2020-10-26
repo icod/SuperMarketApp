@@ -41,7 +41,7 @@ Aantal producten mag niet kleiner dan 0 zijn
 Toon je code aan met tests
 
 <h3>Opdracht 3 -- Verzoek doen om voorraaden aan te vullen</h3>
-In deze opdracht, ga je contact maken met de super LijpeVoorraadServer (LVS)! De LVS heeft een RESTful API waar je berichten naar toe kan schieten. In dit bericht stuur je simpelweg de barcode, en het aantal producten dat je wil hebben.
+In deze opdracht, ga je contact maken met de super LijpeVoorraadServer (LVS)! De LVS heeft een RESTful API waar je berichten naar toe kan schieten. In dit bericht stuur je simpelweg de barcode, en het aantal producten dat je wil hebben. Requests sturen kan bv naar: https://reqbin.com/echo/post/json
 <ul>
   <li>Zet een connector op die HTTP requests kan uitvoeren</li>
   <li>Maak een berichtenmodel op</li>
