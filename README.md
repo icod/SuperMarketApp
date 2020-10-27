@@ -16,7 +16,7 @@ Maak natuurlijk (unit) tests om te kijken je code werkt!
 <h3>Opdracht 1 -- Kassasysteem</h3>
 Onderstaand staan een aantal testproducten. Maak de applicatie zo dat deze producten in een winkelwagentje gezet kunnen worden, die vervolgens bij een kassa kan komen. Bij de kassa worden de producten bij elkaar opgeteld en wordt een prijs bepaald. Nadat alles is opgeteld, wordt er een bonnetje geprint (totaalbedrag is voldoende).
 Afgekeken van de wat bekendere supermarkten, kunnen producten in de bonus zijn. Bonusaanbiedingen leveren 20% korting op per product. 
-Ook afgekeken van wat bekendere supermarkten, kunnen producten bijna over datum zijn. Deze producten krijgen een nog forsere korting, namelijk 35%. Echter kan deze korting NIET samen met de bonuskorting
+Ook afgekeken van wat bekendere supermarkten, kunnen producten bijna over datum zijn. Deze producten krijgen een nog forsere korting, namelijk 35%. Echter kan deze korting NIET samen met de bonuskorting. de 35% korting is leidend ten opzichte van de bonuskorting
 Toon aan dat deze kortingen werken met tests!
 
 Producten (naam, barcode, prijs):
