@@ -22,10 +22,10 @@ Toon aan dat deze kortingen werken met tests!
 Producten (naam, barcode, prijs):
 <ul>
   <li>Kaas, 156734,  4.99</li>
-  <li>Ham, 579843, 1.49</li>
-  <li>Melk, 378941, 0.99</li>
+  <li>Ham, 579843, 1.49, Bonuskorting</li>
+  <li>Melk, 378941, 0.99, Overdatumkorting</li>
   <li>Pizza, 739214, 4.59</li>
-  <li>Bier, 798234, 11,99</li>
+  <li>Bier, 798234, 11,99, Bonuskorting</li>
 </ul>
   
 <h3>Opdracht 2 -- Voorraden bijhouden</h3>
