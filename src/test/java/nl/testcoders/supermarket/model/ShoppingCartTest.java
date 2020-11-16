@@ -126,4 +126,12 @@ class ShoppingCartTest {
         cart.add(bread);
         assertEquals(2, cart.getProducts().size());
     }
+
+    @Test
+    void printReceipt() {
+        cart.add(bread);
+        cart.add(product);
+
+        cart.printReceipt();
+    }
 }

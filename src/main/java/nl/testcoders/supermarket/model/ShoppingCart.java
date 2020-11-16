@@ -1,6 +1,7 @@
 package nl.testcoders.supermarket.model;
 
 import lombok.*;
+import nl.testcoders.supermarket.utilities.Padding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,44 @@ public class ShoppingCart {
      */
     public double getTotalDiscount() {
         return products.stream().mapToDouble(ShoppingCartProduct::getCalculatedDiscount).sum();
+    }
+
+    public String generateReceipt() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("*".repeat(20)).append("\n")
+                .append(" ".repeat(6))
+                .append("Receipt".toUpperCase())
+                .append("\n")
+                .append("*".repeat(20))
+                .append("\n");
+
+        for (ShoppingCartProduct shoppingCartProduct: products) {
+            sb.append(receiptLine(shoppingCartProduct));
+        }
+
+        return sb.toString();
+    }
+
+    public void printReceipt() {
+        System.out.println(generateReceipt());
+    }
+
+    private String receiptLine(ShoppingCartProduct shoppingCartProduct) {
+        int productName = 20;
+        int quantity = 6;
+        int pricePerUnit = 10;
+        int price = 6;
+        int discount = 7;
+        Product product = shoppingCartProduct.getProduct();
+        StringBuilder sb = new StringBuilder();
+        sb.append(Padding.right(product.getDescription(), productName));
+        sb.append(Padding.left(shoppingCartProduct.getQuantity(), quantity));
+        sb.append(Padding.left(product.getPrice(), pricePerUnit));
+        sb.append(Padding.left(shoppingCartProduct.getPrice(), price));
+        sb.append(Padding.left(shoppingCartProduct.getCalculatedDiscount(), discount));
+        sb.append("\n");
+
+        return sb.toString();
     }
 
 }
