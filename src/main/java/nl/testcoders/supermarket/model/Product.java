@@ -1,43 +1,44 @@
 package nl.testcoders.supermarket.model;
 
 import lombok.*;
+import nl.testcoders.supermarket.constants.DiscountValues;
 
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Product {
 
     @Getter
     private final String description;
+
     @Getter
+    @EqualsAndHashCode.Include
     private final long barcode;
+
     @Getter
-    private final double price;
+    private final double priceBeforeDiscount;
+
     @Getter
     @Setter
     @NonNull
     private long amountInStock;
-    @Getter @Setter
-    private boolean isDiscountedBonus;
-    @Getter @Setter
-    private boolean isDiscountedExpiring;
 
-    public double getPriceAfterDiscount() {
-        return price - price * determineDiscount();
+    @Getter
+    @Setter
+    private boolean isDiscountedBonus;
+
+    public double getPrice() {
+        return priceBeforeDiscount * (1 - determineDiscount());
     }
 
     private double determineDiscount() {
-        if (isDiscountedExpiring) {
-            return .35d;
-        }
         if (isDiscountedBonus) {
-            return .20d;
+            return DiscountValues.BONUS;
         }
-        return 0d;
+        return DiscountValues.NO_DISCOUNT;
     }
 
     public void removeDiscount() {
         this.isDiscountedBonus = false;
-        this.isDiscountedExpiring = false;
     }
 
 }

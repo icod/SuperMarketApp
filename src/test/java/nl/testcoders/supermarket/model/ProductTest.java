@@ -15,27 +15,14 @@ class ProductTest {
     }
 
     @Test
-    void getPriceAfterDiscount_no_discount() {
-        assertEquals(1.00, product.getPriceAfterDiscount());
+    void givenAProductWithoutDiscount_thenNoDiscountShouldBeApplied() {
+        assertEquals(product.getPriceBeforeDiscount(), product.getPrice());
     }
 
     @Test
-    void getPriceAfterDiscount_bonus_discount() {
+    void givenAProductWithBonusDiscount_thenBonusDiscountShouldBeApplied() {
         product.setDiscountedBonus(true);
-        assertEquals(0.80, product.getPriceAfterDiscount());
-    }
-
-    @Test
-    void getPriceAfterDiscount_expiring_discount() {
-        product.setDiscountedExpiring(true);
-        assertEquals(0.65, product.getPriceAfterDiscount());
-    }
-
-    @Test
-    void getPriceAfterDiscount_expiring_and_bonus_discount() {
-        product.setDiscountedExpiring(true);
-        product.setDiscountedBonus(true);
-        assertEquals(0.65, product.getPriceAfterDiscount());
+        assertEquals(0.80, product.getPrice());
     }
 
     @Test
@@ -49,8 +36,9 @@ class ProductTest {
     }
 
     @Test
-    void getPrice() {
-        assertEquals(1.00, product.getPrice());
+    void getPriceBeforeDiscount() {
+        product.setDiscountedBonus(true);
+        assertEquals(1.00, product.getPriceBeforeDiscount());
     }
 
     @Test
@@ -64,14 +52,4 @@ class ProductTest {
         assertEquals(12, product.getAmountInStock());
     }
 
-    @Test
-    void removeDiscount() {
-        product.setDiscountedBonus(true);
-        product.setDiscountedExpiring(true);
-        assertTrue(product.isDiscountedBonus());
-        assertTrue(product.isDiscountedExpiring());
-        product.removeDiscount();
-        assertFalse(product.isDiscountedBonus());
-        assertFalse(product.isDiscountedExpiring());
-    }
 }
