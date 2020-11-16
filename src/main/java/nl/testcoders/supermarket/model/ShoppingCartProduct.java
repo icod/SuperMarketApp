@@ -3,8 +3,6 @@ package nl.testcoders.supermarket.model;
 import lombok.*;
 import nl.testcoders.supermarket.constants.DiscountValues;
 
-import java.util.Objects;
-
 @RequiredArgsConstructor(staticName = "of", access = AccessLevel.PROTECTED)
 public class ShoppingCartProduct {
 

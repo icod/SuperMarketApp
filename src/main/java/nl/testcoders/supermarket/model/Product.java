@@ -3,9 +3,20 @@ package nl.testcoders.supermarket.model;
 import lombok.*;
 import nl.testcoders.supermarket.constants.DiscountValues;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 @RequiredArgsConstructor(access = AccessLevel.PUBLIC)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
+    private Long id;
 
     @Getter
     private final String description;
