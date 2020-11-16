@@ -132,6 +132,7 @@ class ShoppingCartTest {
         cart.add(bread);
         cart.add(product);
 
-        cart.printReceipt();
+        assertNotNull(cart.generateReceipt());
+
     }
 }
