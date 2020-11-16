@@ -11,11 +11,28 @@ public class ShoppingCart {
     @Getter
     private List<ShoppingCartProduct> products;
 
+    @Getter
+    private boolean isCheckedOut;
+
     public ShoppingCart() {
         this.products = new ArrayList<>();
+        this.isCheckedOut = false;
+    }
+
+    public boolean checkOut() {
+        if (isCheckedOut) {
+            System.out.println("Already checked out!");
+            return false;
+        }
+        isCheckedOut = true;
+        return true;
     }
 
     public boolean add(Product product) {
+        if (isCheckedOut) {
+            System.out.println("Already checked out!");
+            return false;
+        }
         ShoppingCartProduct shoppingCartProduct = ShoppingCartProduct.of(product);
         if (products.contains(shoppingCartProduct)) {
             int index = products.indexOf(shoppingCartProduct);
@@ -25,6 +42,11 @@ public class ShoppingCart {
     }
 
     public boolean remove(Product product) {
+        if (isCheckedOut) {
+            System.out.println("Already checked out!");
+            return false;
+        }
+
         ShoppingCartProduct shoppingCartProduct = ShoppingCartProduct.of(product);
         if (products.contains(shoppingCartProduct)) {
             int index = products.indexOf(shoppingCartProduct);
@@ -37,12 +59,22 @@ public class ShoppingCart {
     }
 
     public boolean removeAll(Product product) {
+        if (isCheckedOut) {
+            System.out.println("Already checked out!");
+            return false;
+        }
         ShoppingCartProduct shoppingCartProduct = ShoppingCartProduct.of(product);
         return products.remove(shoppingCartProduct);
     }
 
-    public void clear() {
+    public boolean clear() {
+        if (isCheckedOut) {
+            System.out.println("Already checked out!");
+            return false;
+        }
+
         this.products = new ArrayList<>();
+        return true;
     }
 
     public boolean isEmpty() {
