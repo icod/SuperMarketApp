@@ -157,7 +157,6 @@ class ShoppingCartTest {
     void printReceipt() {
         cart.add(bread);
         cart.add(product);
-
         assertNotNull(cart.generateReceipt());
     }
 }
