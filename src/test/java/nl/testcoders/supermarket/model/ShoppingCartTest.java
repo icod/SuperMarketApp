@@ -128,11 +128,36 @@ class ShoppingCartTest {
     }
 
     @Test
+    void checkedOutCartCannotBeCheckedOutAgain() {
+        assertTrue(cart.checkOut());
+        assertFalse(cart.checkOut());
+    }
+
+    @Test
+    void checkedOutCartCannotBeCleared() {
+        cart.checkOut();
+        assertFalse(cart.clear());
+    }
+
+    @Test
+    void checkedOutCartCannotHaveAnyMoreProductsAddedTo() {
+        cart.checkOut();
+        assertFalse(cart.add(bread));
+    }
+
+    @Test
+    void checkOutCartCannotHaveItemsRemovedFromIt() {
+        cart.add(bread);
+        cart.checkOut();
+        assertFalse(cart.remove(bread));
+        assertFalse(cart.removeAll(bread));
+    }
+
+    @Test
     void printReceipt() {
         cart.add(bread);
         cart.add(product);
 
         assertNotNull(cart.generateReceipt());
-
     }
 }
